@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="./images/passwordGeneraterIcon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <p>Password Generator</p>
+        <div class="wrapper">
+            <div class="input-box">
+                <input id="password" type="text" disabled>
+                <span id="copy" onclick="copyPassword()">Copy</span>
+            </div>
+            <div class="pass-settings">
+                <lable class="title">Password Setting</lable>
+                <ul class="options">
+                    <li class="option">
+                        <input checked id="lowercase" type="checkbox">
+                        <lable for="lowercase">Lowercase (a-z)</lable>
+                    </li>
+                    <li class="option">
+                        <input id="uppercase" type="checkbox">
+                        <lable for="uppercase">Uppercase(A-Z)</lable>
+                    </li>
+                    <li class="option">
+                        <input id="numbers" type="checkbox">
+                        <lable for="numbers">Numbers(0-9)</lable>
+                    </li>
+                    <li class="option">
+                        <input id="symbols" type="checkbox">
+                        <lable for="symbols">Symbols(!-$^+)</lable>
+                    </li>
+                    <li class="option">
+                        <input id="exc-duplicate" type="checkbox">
+                        <lable for="exc-duplicate">Exclude Duplicate</lable>
+                    </li>
+                    <li class="option">
+                        <input id="spaces" type="checkbox">
+                        <lable for="spaces">Include spaces</lable>
+                    </li>
+                </ul>
+            </div>
+            <button class="generate-but" id="generate" onclick="generatePassword()">Password Generator</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
