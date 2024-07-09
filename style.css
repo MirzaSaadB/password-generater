@@ -1,9 +1,12 @@
+/* Base styles */
 .container {
     width: min(450px, 90%);
     background: #8c92bb;
     border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    margin: 15rem 32.5rem;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container p {
@@ -11,6 +14,7 @@
     font-size: 1.31rem;
     padding: 1rem 1.75rem;
     border-bottom: 1px solid #858bb2;
+    text-align: center;
 }
 
 .wrapper {
@@ -19,10 +23,11 @@
 
 .wrapper .input-box {
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .input-box input {
-    width: 83%;
+    width: calc(100% - 60px);
     height: 53px;
     color: #fff;
     background: #858bb2;
@@ -51,19 +56,18 @@
 }
 
 .pass-settings .options {
-
     display: flex;
-    list-style: none;
     flex-wrap: wrap;
+    list-style: none;
     margin-top: 1rem;
-
+    padding: 0;
 }
 
 .pass-settings .options .option {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    width: calc(100% /2);
+    width: calc(100% / 2);
 }
 
 .options .option:first-child input {
@@ -84,7 +88,6 @@
 
 .pass-settings input {
     accent-color: #46496e;
-
 }
 
 .wrapper .generate-but {
@@ -98,7 +101,6 @@
     padding: 0.94rem 0rem;
     border-radius: 5px;
     text-transform: uppercase;
-    max-width: 0.94rem 0 1.3rem;
     margin-bottom: 1rem;
 }
 
@@ -109,4 +111,35 @@
 .wrapper .generate-but:active {
     background-color: #000;
     color: red;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .wrapper .input-box input {
+        width: calc(100% - 50px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container p {
+        font-size: 1rem;
+    }
+
+    .input-box input {
+        width: calc(100% - 40px);
+        font-size: 0.9rem;
+    }
+
+    .pass-settings .options .option {
+        width: 100%;
+    }
+
+    .wrapper .generate-but {
+        font-size: 0.9rem;
+        padding: 0.8rem 0;
+    }
 }
